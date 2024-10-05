@@ -13,7 +13,12 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
     },
+    fontFamily: {
+        neue_montreal: 'var(--font-neue-montreal)',
+    }
   },
-  plugins: [],
+  plugins: [
+    
+  ],
 };
 export default config;
