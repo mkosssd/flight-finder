@@ -40,11 +40,11 @@ export function CustomDateInput({ label, onChange, fromDate, toDate, value, }: {
 
     return (
         <Popover>
-            <PopoverTrigger asChild>
+            <PopoverTrigger asChild className="py-6">
                 <Button
                     variant={"outline"}
                     className={cn(
-                        "w-[180px] justify-start text-left font-normal",
+                        "md:w-[180px] w-[250px] justify-start text-left font-normal",
                         !date && "text-muted-foreground"
                     )}
                 >

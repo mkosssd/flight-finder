@@ -100,7 +100,7 @@ const SearchBox = ({ classname, params,closeDrawer }: { classname?: string, para
                 <h2 className="font-bold text-xl mb-6">Flights</h2>
             </div>
             <div>
-                <div className="grid max-lg:place-items-center lg:grid-cols-[1fr_auto_1fr_auto_auto] gap-4 mb-9">
+                <div className="grid max-lg:place-items-center lg:grid-cols-[1fr_auto_1fr_auto_auto] items-center gap-4 mb-9">
                     <CustomInput
                         data={airports.filter(e => e.code !== toCity)}
                         placeholder="Where from?"
@@ -140,7 +140,7 @@ const SearchBox = ({ classname, params,closeDrawer }: { classname?: string, para
                     </div>
                 </div>
                 <div className="text-end">
-                    <Button onClick={searchButtonHandler} className="px-9 bg-themeBtn w-[250px] hover:bg-themeBtn/90">
+                    <Button onClick={searchButtonHandler} className="px-9 py-6 bg-themeBtn w-[250px] hover:bg-themeBtn/90">
                         <Search className="mr-2 h-4 w-4" /> Search flights
                     </Button>
                 </div>

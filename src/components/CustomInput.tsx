@@ -35,7 +35,7 @@ const CustomInput = ({ data, placeholder, className, value, onChange }: ICustomI
     return (
         <div
             className={cn(
-                "flex h-10 items-center rounded-md border border-input bg-white pl-3 text-sm ring-offset-background focus-within:ring-1 focus-within:ring-ring focus-within:ring-offset-2 hover:bg-slate-100 px-2",
+                "flex h-10 items-center rounded-md border border-input bg-white pl-3 text-sm ring-offset-background focus-within:ring-1 focus-within:ring-ring focus-within:ring-offset-2 py-6 hover:bg-slate-100 px-2 max-md:w-[250px] ",
                 className
             )}
         >
