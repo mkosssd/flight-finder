@@ -88,6 +88,8 @@ const SearchBox = ({ classname, params,closeDrawer }: { classname?: string, para
         }).toString();
 
         navigator.push(`/search?${query}`);
+        //to simulate loading
+        window.location.reload()
         if(closeDrawer) closeDrawer(false)
 
     };
