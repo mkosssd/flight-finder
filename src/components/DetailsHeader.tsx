@@ -55,7 +55,7 @@ const DetailsHeader = () => {
                             </div>
                         </DrawerTrigger>
                         <DrawerContent className="!top-0 mt-0 py-5 !h-fit" data-vaul-drawer-direction="top">
-                            <SearchBox closeDrawer={setOpen} classname="z-50" params={paramsObject}/>
+                            <SearchBox isReload closeDrawer={setOpen} classname="z-50" params={paramsObject}/>
                         </DrawerContent>
                     </Drawer>
                     <Button onClick={() => router.push('/')} variant='outline' className="border-2 rounded-[50%] p-2 h-[50px] w-[50px]">

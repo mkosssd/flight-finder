@@ -11,7 +11,7 @@ import { useToast } from '@/hooks/use-toast';
 import { ToastAction } from './ui/toast';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const SearchBox = ({ classname, params,closeDrawer }: { classname?: string, params?: any, closeDrawer?:any }) => {
+const SearchBox = ({ classname, params, closeDrawer, isReload }: { classname?: string, params?: any, closeDrawer?:any, isReload?: boolean }) => {
     const navigator = useRouter();
     const { toast } = useToast();
     
@@ -89,7 +89,7 @@ const SearchBox = ({ classname, params,closeDrawer }: { classname?: string, para
 
         navigator.push(`/search?${query}`);
         //to simulate loading
-        window.location.reload()
+        if(isReload) window.location.reload()
         if(closeDrawer) closeDrawer(false)
 
     };
