@@ -13,6 +13,7 @@ import { formatDate } from 'date-fns';
 import { ArrowLeft } from 'lucide-react';
 import FlightDetails from './FlightDetails';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const CustomSheet = ({ data, params }: { data: IItinerary, params: any }) => {
     console.log(data);
     const departureData = data.flights[0]
