@@ -50,7 +50,7 @@ const CustomInput = ({ data, placeholder, className, value, onChange }: ICustomI
                         className="w-[200px] justify-between bg-transparent hover:bg-transparent overflow-hidden focus-visible:ring-0:border-0"
 
                     >
-                        <p>
+                        <p className="overflow-hidden">
                             {selectedData ? (
                                 <>
                                     <span className="font-bold">{selectedData.code}</span> <span className="font-[#787B80]"> {selectedData.name}</span>
