@@ -1,0 +1,158 @@
+[
+  {
+    "flights": [
+      {
+        "airline": "Emirates",
+        "flightNumber": "EK 1001",
+        "departure": "10:00 AM",
+        "arrival": "12:00 PM",
+        "route": "CDG - DXB",
+        "departureCityCode": "CDG",
+        "arrivalCityCode": "DXB",
+        "departureAirport": "Charles de Gaulle Airport",
+        "arrivalAirport": "Dubai International Airport",
+        "duration": "2h 0min",
+        "stops": "Non stop"
+      },
+      {
+        "airline": "Lufthansa",
+        "flightNumber": "LH 2002",
+        "departure": "12:30 AM",
+        "arrival": "7:30 AM",
+        "route": "DXB - CDG",
+        "departureCityCode": "DXB",
+        "arrivalCityCode": "CDG",
+        "departureAirport": "Dubai International Airport",
+        "arrivalAirport": "Charles de Gaulle Airport",
+        "duration": "4h 30min",
+        "additionalInfo": "5h 00m in Lisbon, Portugal",
+        "stops": "2 stops"
+      }
+    ],
+    "price": "AED 2,500.00"
+  },
+  {
+    "flights": [
+      {
+        "airline": "Emirates",
+        "flightNumber": "EK 1003",
+        "departure": "10:00 AM",
+        "arrival": "12:00 PM",
+        "route": "CDG - DXB",
+        "departureCityCode": "CDG",
+        "arrivalCityCode": "DXB",
+        "departureAirport": "Charles de Gaulle Airport",
+        "arrivalAirport": "Dubai International Airport",
+        "duration": "8h 0min",
+        "stops": "1 stop"
+      },
+      {
+        "airline": "Emirates",
+        "flightNumber": "EK 1004",
+        "departure": "1:00 AM",
+        "arrival": "8:00 AM",
+        "route": "DXB - CDG",
+        "departureCityCode": "DXB",
+        "arrivalCityCode": "CDG",
+        "arrivalAirport": "Charles de Gaulle Airport",
+        "departureAirport": "Dubai International Airport",
+        "duration": "19h 0min",
+        "stops": "1 stop"
+      }
+    ],
+    "price": "AED 1,800.00"
+  },
+  {
+    "flights": [
+      {
+        "airline": "Lufthansa",
+        "flightNumber": "LH 3001",
+        "departure": "10:00 AM",
+        "arrival": "12:00 PM",
+        "route": "CDG - DXB",
+        "departureCityCode": "CDG",
+        "arrivalCityCode": "DXB",
+        "departureAirport": "Charles de Gaulle Airport",
+        "arrivalAirport": "Dubai International Airport",
+        "duration": "6h 0min",
+        "stops": "Non stop"
+      },
+      {
+        "airline": "Lufthansa",
+        "flightNumber": "LH 3002",
+        "departure": "12:30 AM",
+        "arrival": "7:30 AM",
+        "route": "DXB - CDG",
+        "departureCityCode": "DXB",
+        "arrivalCityCode": "CDG",
+        "departureAirport": "Dubai International Airport",
+        "arrivalAirport": "Charles de Gaulle Airport",
+        "duration": "4h 30min",
+        "stops": "Non stop"
+      }
+    ],
+    "price": "AED 1,700.00"
+  },
+  {
+    "flights": [
+      {
+        "airline": "Emirates",
+        "flightNumber": "EK 2001",
+        "departure": "9:00 AM",
+        "arrival": "2:00 PM",
+        "route": "CDG - DXB",
+        "departureCityCode": "CDG",
+        "arrivalCityCode": "DXB",
+        "departureAirport": "Charles de Gaulle Airport",
+        "arrivalAirport": "Dubai International Airport",
+        "duration": "6h 0min",
+        "stops": "Non stop"
+      },
+      {
+        "airline": "Lufthansa",
+        "flightNumber": "LH 4001",
+        "departure": "12:30 AM",
+        "arrival": "8:00 AM",
+        "route": "DXB - CDG",
+        "departureCityCode": "DXB",
+        "arrivalCityCode": "CDG",
+        "departureAirport": "Dubai International Airport",
+        "arrivalAirport": "Charles de Gaulle Airport",
+        "duration": "8h 0min",
+        "stops": "1 stop"
+      }
+    ],
+    "price": "AED 2,200.00"
+  },
+  {
+    "flights": [
+      {
+        "airline": "Emirates",
+        "flightNumber": "EK 2003",
+        "departure": "2:00 PM",
+        "arrival": "6:00 PM",
+        "route": "CDG - DXB",
+        "departureCityCode": "CDG",
+        "arrivalCityCode": "DXB",
+        "departureAirport": "Charles de Gaulle Airport",
+        "arrivalAirport": "Dubai International Airport",
+        "duration": "4h 0min",
+        "stops": "Non stop"
+      },
+      {
+        "airline": "Lufthansa",
+        "flightNumber": "LH 5001",
+        "departure": "9:00 PM",
+        "arrival": "5:30 AM",
+        "route": "DXB - CDG",
+        "departureCityCode": "DXB",
+        "arrivalCityCode": "CDG",
+        "departureAirport": "Dubai International Airport",
+        "arrivalAirport": "Charles de Gaulle Airport",
+        "duration": "8h 0min",
+        "stops": "2 stops"
+      }
+    ],
+    "price": "AED 2,400.00"
+  }
+]
