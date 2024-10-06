@@ -79,3 +79,20 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes moving {
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+    right: 0;
+    left: unset;
+  }
+}
+
+.animate-moving {
+  animation: moving 2s ease-in-out infinite;
+  width: 0;
+}

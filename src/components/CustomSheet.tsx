@@ -15,11 +15,12 @@ import FlightDetails from './FlightDetails';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const CustomSheet = ({ data, params }: { data: IItinerary, params: any }) => {
-    console.log(data);
+
     const departureData = data.flights[0]
     const arrivalData = data.flights[1]
     const departureDate = formatDate(new Date(params.departureDate), 'EEE dd MMMM')
     const returnDate = formatDate(new Date(params.returnDate), 'EEE dd MMMM')
+    
     return (
         <Sheet>
             <SheetTrigger className='w-full h-full'></SheetTrigger>

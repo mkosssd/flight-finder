@@ -10,53 +10,87 @@ import { useRouter } from 'next/navigation';
 import { useToast } from '@/hooks/use-toast';
 import { ToastAction } from './ui/toast';
 
-const SearchBox = ({ classname }: { classname?: string }) => {
-    const navigator = useRouter()
-    const { toast } = useToast()
-
-
-    const [fromCity, setFromCity] = useState<string | null>(null);
-    const [toCity, setToCity] = useState<string | null>(null);
-    const [departureDate, setDepartureDate] = useState<Date | null>(null);
-    const [returnDate, setReturnDate] = useState<Date | null>(null);
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const SearchBox = ({ classname, params,closeDrawer }: { classname?: string, params?: any, closeDrawer?:any }) => {
+    const navigator = useRouter();
+    const { toast } = useToast();
+    
+    const [fromCity, setFromCity] = useState<string | null>(params?.fromCity || null);
+    const [toCity, setToCity] = useState<string | null>(params?.toCity || null);
+    const [departureDate, setDepartureDate] = useState<Date | null>(
+        params?.departureDate ? new Date(params.departureDate) : null
+    );
+    const [returnDate, setReturnDate] = useState<Date | null>(
+        params?.returnDate ? new Date(params.returnDate) : null
+    );
+    
     const handleInterchange = () => {
         setFromCity(toCity);
         setToCity(fromCity);
     };
 
-
     const handleChange = (selectedDate: Date | null) => {
-        if (!selectedDate) return
-        setDepartureDate(selectedDate)
-        setReturnDate(null)
-    }
+        if (!selectedDate) return;
+        setDepartureDate(selectedDate);
+        setReturnDate(null);
+    };
 
     const searchButtonHandler = () => {
-
-        if (!fromCity || !toCity || !departureDate || !returnDate) {
+        if (!fromCity) {
             toast({
-                title: "Invalid Details.",
-                description: "Please fill all the details.",
+                title: "Missing Departure City.",
+                description: "Please select a departure city.",
                 action: <ToastAction altText="Try again">Okay</ToastAction>,
                 variant: 'destructive'
-            })
+            });
+            return;
+        }
 
-            return
+        if (!toCity) {
+            toast({
+                title: "Missing Arrival City.",
+                description: "Please select an arrival city.",
+                action: <ToastAction altText="Try again">Okay</ToastAction>,
+                variant: 'destructive'
+            });
+            return;
+        }
+
+        if (!departureDate) {
+            toast({
+                title: "Missing Departure Date.",
+                description: "Please select a departure date.",
+                action: <ToastAction altText="Try again">Okay</ToastAction>,
+                variant: 'destructive'
+            });
+            return;
+        }
+
+        if (!returnDate) {
+            toast({
+                title: "Missing Return Date.",
+                description: "Please select a return date.",
+                action: <ToastAction altText="Try again">Okay</ToastAction>,
+                variant: 'destructive'
+            });
+            return;
         }
 
         const formattedDepartureDate = departureDate.toISOString().split('T')[0];
         const formattedReturnDate = returnDate.toISOString().split('T')[0];
 
+            
         const query = new URLSearchParams({
             fromCity: fromCity,
-            toCity,
+            toCity: toCity,
             departureDate: formattedDepartureDate,
             returnDate: formattedReturnDate
         }).toString();
 
-        navigator.push(`/search?${query}`)
-    }
+        navigator.push(`/search?${query}`);
+        if(closeDrawer) closeDrawer(false)
+
+    };
 
     return (
         <div className={cn("mx-auto ", classname)}>
@@ -64,10 +98,9 @@ const SearchBox = ({ classname }: { classname?: string }) => {
                 <h2 className="font-bold text-xl mb-6">Flights</h2>
             </div>
             <div>
-                <div className="grid  max-lg:place-items-center lg:grid-cols-[1fr_auto_1fr_auto_auto]  gap-4 mb-9 ">
-
+                <div className="grid max-lg:place-items-center lg:grid-cols-[1fr_auto_1fr_auto_auto] gap-4 mb-9">
                     <CustomInput
-                        data={airports.filter(e => e.code != toCity)}
+                        data={airports.filter(e => e.code !== toCity)}
                         placeholder="Where from?"
                         className="col-span-1"
                         value={fromCity}
@@ -80,12 +113,11 @@ const SearchBox = ({ classname }: { classname?: string }) => {
                     </Button>
 
                     <CustomInput
-                        data={airports.filter(e => e.code != fromCity)}
+                        data={airports.filter(e => e.code !== fromCity)}
                         placeholder="Where to?"
                         className="col-span-1"
                         value={toCity}
                         onChange={setToCity}
-
                     />
 
                     <div className="col-span-1">
@@ -93,19 +125,20 @@ const SearchBox = ({ classname }: { classname?: string }) => {
                             label="Departure"
                             onChange={handleChange}
                             fromDate={new Date()}
+                            value={departureDate}
                         />
                     </div>
                     <div className="col-span-1">
                         <CustomDateInput
                             label="Return"
                             fromDate={departureDate ?? new Date()}
-                            value={departureDate ?? undefined}
+                            value={returnDate}
                             onChange={(date) => setReturnDate(date)}
                         />
                     </div>
                 </div>
-                <div className='text-end'>
-                    <Button onClick={searchButtonHandler} className='px-9 bg-themeBtn w-[250px] hover:bg-themeBtn/90 ' >
+                <div className="text-end">
+                    <Button onClick={searchButtonHandler} className="px-9 bg-themeBtn w-[250px] hover:bg-themeBtn/90">
                         <Search className="mr-2 h-4 w-4" /> Search flights
                     </Button>
                 </div>
