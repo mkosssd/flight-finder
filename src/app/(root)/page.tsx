@@ -1,5 +1,11 @@
 import SearchBox from '@/components/SearchBox'
+import { Metadata } from 'next'
 import React from 'react'
+
+export const metadata: Metadata = {
+    title: 'Flight Finder',
+    description: 'Find Flights'
+}
 
 const Home = () => {
 	const username = 'Brian'
