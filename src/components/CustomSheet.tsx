@@ -24,12 +24,12 @@ const CustomSheet = ({ data, params }: { data: IItinerary, params: any }) => {
     return (
         <Sheet>
             <SheetTrigger className='w-full h-full'></SheetTrigger>
-            <SheetContent className="md:w-[700px] w-full !max-w-none px-8 ">
+            <SheetContent className="md:w-[700px] w-full !max-w-none px-8 overflow-y-scroll">
                 <SheetClose><ArrowLeft width={17} /></SheetClose>
                 <SheetHeader className="border-b border-bordeLight py-4 mb-8">
                     <SheetTitle className="text-xl">Flight Details</SheetTitle>
                 </SheetHeader>
-                <SheetDescription>
+                <SheetDescription >
                     <div>
                         <ul className=" overflow-hidden space-y-8 ">
                             <FlightDetails data={departureData} date={departureDate} />

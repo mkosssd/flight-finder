@@ -11,8 +11,8 @@ const Home = () => {
 	const username = 'Brian'
 	return (
 		<section className="min-h-screen font-neue_montreal py-24">
-			<div className="container max-md:px-5">
-				<div className="flex flex-col items-center">
+			<div className="container ">
+				<div className="flex flex-col items-center max-md:px-5">
 
 					<div className="header mb-6">
 						<h1 className='text-[36px] '>Good afternoon, {username || 'Guest'}</h1>
