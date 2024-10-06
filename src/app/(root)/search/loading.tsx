@@ -57,6 +57,7 @@ const Loading = () => {
                             <div className='shadow-lg p-4 w-[323px] h-[300px] bg-white flex flex-col items-center justify-center gap-5'>
                                 <div>
                                     <Image
+                                        loading='eager'
                                         width={100}
                                         height={100}
                                         src='https://s3-alpha-sig.figma.com/img/df34/ff5d/de2e13b8b13ef90316e36338415b882b?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Gf5vcD9rdcm2adRpOJP3gAjZdFw4t~nDk35aMPorNTirD6B6qGn4pQi1JbReocuqq~cxodGvgarRJAqSKVzdPvbZ0Gyv0mqiHHHJv~tpYoZFF-6NghBwV2j2pm3pgUrXDX-pAMCdybJneNFMyGh6rc4b0WuRxmPOYb1xwpjZtlNbcR4tUe3~0kr-qGqBrab0RTcQdcfhpY16~48jsZyfHNrKppbIOVS3uuCP56JxjeadzaL9X4m2sQkb0-fmozexqp6FxJLkxHRQGc877BVL6ltt~fNDX5w1DYb~HNrx4gEtmQEYKL-aay2uVWzMRKvcJXvHFiga99BawWL493xM9g__'
